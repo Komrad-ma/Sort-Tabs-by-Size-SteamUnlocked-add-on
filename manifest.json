@@ -1,28 +1,23 @@
 {
-  "manifest_version": 2,
-  "name": "Sort Tabs by Size (SteamUnlocked)",
-  "version": "1.0",
+  "manifest_version": 3,
+  "name": "Sort Tabs by Size",
+  "version": "0.3",
   "description": "Sort tabs by size of SteamUnlocked website.",
   "permissions": [
     "tabs",
-    "activeTab",
-    "storage",
-    "<all_urls>",
+    "scripting",
     "notifications"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "browser_action": {
+  "action": {
     "default_title": "Sort Tabs"
   },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "icons": {
     "48": "icon.png"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "sort-tabs-by-xpath@example.com"
-    }
   }
 }
