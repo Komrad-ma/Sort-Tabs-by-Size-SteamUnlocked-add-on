@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Sort Tabs by Size",
+  "version": "0.3",
+  "description": "Sort tabs by size of SteamUnlocked website.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Sort Tabs"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
